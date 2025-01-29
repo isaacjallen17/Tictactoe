@@ -53,7 +53,7 @@ while (true)
     if (end != "")
     {
         Console.WriteLine(end);
-
+        b.PrintBoard(positions);
         break;
     }
     Console.WriteLine("Press enter to continue");
@@ -89,14 +89,14 @@ while (true)
     if (end != "")
     {
         Console.WriteLine(end);
-
+        b.PrintBoard(positions);
         break;
     }
     Console.WriteLine("Press enter to continue");
     Console.ReadLine();
     Console.Clear();
 }
-Console.WriteLine("Goodbye!");
+Console.WriteLine("\nGoodbye!");
 
 
 
