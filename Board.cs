@@ -8,6 +8,21 @@ namespace Tictactoe
 {
     internal class Board
     {
+
+        public void PrintBoard(string[] board)
+        {
+
+            Console.Clear(); // Clear the screen to show the current board
+
+            // Print the board in a 3x3 grid format
+            Console.WriteLine("Current Board:");
+            Console.WriteLine($" {board[0]} | {board[1]} | {board[2]} ");
+            Console.WriteLine("---+---+---");
+            Console.WriteLine($" {board[3]} | {board[4]} | {board[5]} ");
+            Console.WriteLine("---+---+---");
+            Console.WriteLine($" {board[6]} | {board[7]} | {board[8]} ");
+        }
+
         public bool Winner(string[] oldgame)
         {
             //convert 1D array to 2D array
