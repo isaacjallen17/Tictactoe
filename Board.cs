@@ -12,7 +12,7 @@ namespace Tictactoe
         public void PrintBoard(string[] board)
         {
 
-            Console.Clear(); // Clear the screen to show the current board
+            //Console.Clear(); // Clear the screen to show the current board
 
             // Print the board in a 3x3 grid format
             Console.WriteLine("Current Board:");
@@ -25,7 +25,6 @@ namespace Tictactoe
 
         public bool Winner(string[] oldgame)
         {
-            //convert 1D array to 2D array
             string[][] game = new string[3][];
             for (int i = 0; i < 3; i++)
             {
@@ -37,34 +36,10 @@ namespace Tictactoe
                 }
             }
             bool gameover = false;
-            //check horizontal
-            for (int i = 0; i < 3; i++)
-            {
-                if (!char.IsLetter(game[i][0][0]) && (game[i][0] == game[i][1] && game[i][1] == game[i][2]))
-                {
-                    gameover = true;
-                    Console.WriteLine("The winner is " + game[i][0] + "!!!");
-                }
-            }
-            //check vertical
-            for (int i = 0; i < 3; i++)
-            {
-                if (!char.IsLetter(game[0][i][0]) && (game[0][i] == game[1][i] && game[1][i] == game[2][i]))
-                {
-                    gameover = true;
-                    Console.WriteLine("The winner is " + game[i][0] + "!!!");
-                }
-            }
-            //check diagonal
-            if (!char.IsLetter(game[0][0][0]) && ((game[0][0] == game[1][1] && game[1][1] == game[2][2]) || (game[0][2] == game[1][1] & game[1][1] == game[2][0])))
-            {
-                gameover = true;
-                Console.WriteLine("The winner is " + game[1][1] + "!!!");
-            }
             //check draw
-            for(int i = 0; i< 9; i++)
+            for (int i = 0; i < 9; i++)
             {
-                if (char.IsLetter(oldgame[i][0]))
+                if (!char.IsLetter(oldgame[i][0]))
                 {
                     gameover = false;
                     break;
@@ -74,7 +49,30 @@ namespace Tictactoe
                     gameover = true;
                 }
             }
-
+            //check horizontal
+            for (int i = 0; i < 3; i++)
+            {
+                if (char.IsLetter(game[i][0][0]) && (game[i][0] == game[i][1] && game[i][1] == game[i][2]))
+                {
+                    gameover = true;
+                    Console.WriteLine("The winner is " + game[i][0] + "!!!");
+                }
+            }
+            //check vertical
+            for (int i = 0; i < 3; i++)
+            {
+                if (char.IsLetter(game[0][i][0]) && (game[0][i] == game[1][i] && game[1][i] == game[2][i]))
+                {
+                    gameover = true;
+                    Console.WriteLine("The winner is " + game[i][0] + "!!!");
+                }
+            }
+            //check diagonal
+            if (char.IsLetter(game[0][0][0]) && ((game[0][0] == game[1][1] && game[1][1] == game[2][2]) || (game[0][2] == game[1][1] & game[1][1] == game[2][0])))
+            {
+                gameover = true;
+                Console.WriteLine("The winner is " + game[1][1] + "!!!");
+            }
             return gameover;
         }
     };
