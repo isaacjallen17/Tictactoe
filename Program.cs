@@ -5,6 +5,8 @@ Console.WriteLine("Welcome to Tic Tac Toe!");
 
 string[] positions = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
+string end = "";
+
 Board b = new Board();
 // prints board
 //checj for winner
@@ -45,12 +47,12 @@ while (true)
 
         }
     }
-
+    end = b.Winner(positions);
 
     //func that checks for winner
-    if (b.Winner(positions))
+    if (end != "")
     {
-        b.PrintBoard(positions);
+        Console.WriteLine(end);
 
         break;
     }
@@ -81,17 +83,20 @@ while (true)
 
         }
     }
+    end = b.Winner(positions);
 
     //func that checks for winner
-    if (b.Winner(positions))
+    if (end != "")
     {
-        b.PrintBoard(positions);
+        Console.WriteLine(end);
+
         break;
     }
     Console.WriteLine("Press enter to continue");
     Console.ReadLine();
     Console.Clear();
 }
+Console.WriteLine("Goodbye!");
 
 
 
