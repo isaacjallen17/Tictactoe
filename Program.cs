@@ -20,7 +20,6 @@ while (true)
     int iChoice = 0;
     bool bPlayer1 = true;
     bool bPlayer2 = true;
-    Console.Clear();
     //PLAYER 1 MOVE
 
     // func that displays board
@@ -55,8 +54,10 @@ while (true)
 
         break;
     }
-
-    //PLAYER 1 MOVE
+    Console.WriteLine("Press enter to continue");
+    Console.ReadLine();
+    Console.Clear();
+    //PLAYER 2 MOVE
 
     // func that displays board
     b.PrintBoard(positions);
@@ -87,7 +88,9 @@ while (true)
         b.PrintBoard(positions);
         break;
     }
-
+    Console.WriteLine("Press enter to continue");
+    Console.ReadLine();
+    Console.Clear();
 }
 
 
