@@ -20,7 +20,7 @@ while (true)
     int iChoice = 0;
     bool bPlayer1 = true;
     bool bPlayer2 = true;
-
+    Console.Clear();
     //PLAYER 1 MOVE
 
     // func that displays board

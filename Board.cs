@@ -12,7 +12,6 @@ namespace Tictactoe
         public void PrintBoard(string[] board)
         {
 
-            Console.Clear(); // Clear the screen to show the current board
 
             // Print the board in a 3x3 grid format
             Console.WriteLine("Current Board:");
