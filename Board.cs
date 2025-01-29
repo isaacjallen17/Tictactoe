@@ -50,6 +50,9 @@ namespace Tictactoe
                 else
                 {
                     gameover = true;
+                }
+                if(gameover)
+                {
                     Console.WriteLine("The game is a draw!");
                 }
             }
