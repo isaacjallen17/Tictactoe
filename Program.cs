@@ -47,6 +47,10 @@ while (true)
 
         }
     }
+    Console.WriteLine("Press enter to continue");
+    Console.ReadLine();
+    Console.Clear();
+
     end = b.Winner(positions);
 
     //func that checks for winner
@@ -56,9 +60,7 @@ while (true)
         b.PrintBoard(positions);
         break;
     }
-    Console.WriteLine("Press enter to continue");
-    Console.ReadLine();
-    Console.Clear();
+
     //PLAYER 2 MOVE
 
     // func that displays board
@@ -83,6 +85,10 @@ while (true)
 
         }
     }
+    Console.WriteLine("Press enter to continue");
+    Console.ReadLine();
+    Console.Clear();
+
     end = b.Winner(positions);
 
     //func that checks for winner
@@ -92,9 +98,7 @@ while (true)
         b.PrintBoard(positions);
         break;
     }
-    Console.WriteLine("Press enter to continue");
-    Console.ReadLine();
-    Console.Clear();
+    
 }
 Console.WriteLine("\nGoodbye!");
 
