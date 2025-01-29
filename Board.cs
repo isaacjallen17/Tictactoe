@@ -51,10 +51,10 @@ namespace Tictactoe
                 {
                     gameover = true;
                 }
-                if(gameover)
-                {
-                    Console.WriteLine("The game is a draw!");
-                }
+            }
+            if (gameover)
+            {
+                Console.WriteLine("It's a draw!");
             }
 
             // Check for horizontal wins
