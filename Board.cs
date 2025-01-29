@@ -38,19 +38,26 @@ namespace Tictactoe
             }
 
             string output = "";
+            bool draw = false;
 
             // Check for a draw
             for (int i = 0; i < 9; i++)
             {
                 if (!char.IsLetter(oldgame[i][0]))
                 {
+                    // If there is an number, the game is not a draw
+                    draw = false;
                     break;
                 }
                 else
                 {
-                    output = "It's a draw!";
-                    return output;
+                    draw = true;
                 }
+            }
+            if (draw)
+            {
+                output = "The game is a draw!";
+                return output;
             }
 
             // Check for horizontal wins
