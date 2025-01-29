@@ -61,6 +61,20 @@ namespace Tictactoe
                 gameover = true;
                 Console.WriteLine("The winner is " + game[1][1] + "!!!");
             }
+            //check draw
+            for(int i = 0; i< 9; i++)
+            {
+                if (oldgame[i] == "-")
+                {
+                    gameover = false;
+                    break;
+                }
+                else
+                {
+                    gameover = true;
+                }
+            }
+
             return gameover;
         }
     };
