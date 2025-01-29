@@ -49,7 +49,6 @@ while (true)
 
 
     //func that checks for winner
-    b.Winner(positions);
     if (b.Winner(positions))
     {
         b.PrintBoard(positions);
@@ -83,7 +82,6 @@ while (true)
     }
 
     //func that checks for winner
-    b.Winner(positions);
     if (b.Winner(positions))
     {
         b.PrintBoard(positions);
