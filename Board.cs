@@ -63,7 +63,7 @@ namespace Tictactoe
                 if (char.IsLetter(game[0][i][0]) && (game[0][i] == game[1][i] && game[1][i] == game[2][i]))
                 {
                     gameover = true;
-                    Console.WriteLine("The winner is " + game[i][0] + "!!!");
+                    Console.WriteLine("The winner is " + game[0][i] + "!!!");
                 }
             }
             //check diagonal
