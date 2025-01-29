@@ -23,7 +23,7 @@ namespace Tictactoe
         }
 
         // This method checks if there is a winner or if the game is a draw
-        public bool Winner(string[] oldgame)
+        public string Winner(string[] oldgame)
         {
             // Convert the 1D array to a 2D array for easier manipulation
             string[][] game = new string[3][];
@@ -37,24 +37,20 @@ namespace Tictactoe
                 }
             }
 
-            bool gameover = false;
+            string output = "";
 
             // Check for a draw
             for (int i = 0; i < 9; i++)
             {
                 if (!char.IsLetter(oldgame[i][0]))
                 {
-                    gameover = false;
                     break;
                 }
                 else
                 {
-                    gameover = true;
+                    output = "It's a draw!";
+                    return output;
                 }
-            }
-            if (gameover)
-            {
-                Console.WriteLine("It's a draw!");
             }
 
             // Check for horizontal wins
@@ -62,8 +58,8 @@ namespace Tictactoe
             {
                 if (char.IsLetter(game[i][0][0]) && (game[i][0] == game[i][1] && game[i][1] == game[i][2]))
                 {
-                    gameover = true;
-                    Console.WriteLine("The winner is " + game[i][0] + "!!!");
+                    output = "The winner is " + game[i][0] + "!!!";
+                    return output;
                 }
             }
 
@@ -72,19 +68,19 @@ namespace Tictactoe
             {
                 if (char.IsLetter(game[0][i][0]) && (game[0][i] == game[1][i] && game[1][i] == game[2][i]))
                 {
-                    gameover = true;
-                    Console.WriteLine("The winner is " + game[0][i] + "!!!");
+                    output = "The winner is " + game[0][i] + "!!!";
+                    return output;
                 }
             }
 
             // Check for diagonal wins
             if (char.IsLetter(game[0][0][0]) && ((game[0][0] == game[1][1] && game[1][1] == game[2][2]) || (game[0][2] == game[1][1] & game[1][1] == game[2][0])))
             {
-                gameover = true;
-                Console.WriteLine("The winner is " + game[1][1] + "!!!");
+                output = "The winner is " + game[1][1] + "!!!";
+                return output;
             }
 
-            return gameover;
+            return output;
         }
     };
     
