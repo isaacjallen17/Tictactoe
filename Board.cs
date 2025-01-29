@@ -81,7 +81,7 @@ namespace Tictactoe
             }
 
             // Check for diagonal wins
-            if (char.IsLetter(game[0][0][0]) && ((game[0][0] == game[1][1] && game[1][1] == game[2][2]) || (game[0][2] == game[1][1] & game[1][1] == game[2][0])))
+            if (char.IsLetter(game[1][1][0]) && ((game[0][0] == game[1][1] && game[1][1] == game[2][2]) || (game[0][2] == game[1][1] & game[1][1] == game[2][0])))
             {
                 output = "The winner is " + game[1][1] + "!!!";
                 return output;
